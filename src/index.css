@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.sub-menu {
+  left: 400px !important;
+}
+.menu-item {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.offcanvas.show .menu-item {
+  animation: menuItemAppear 0.4s ease forwards;
+}
+
+.offcanvas.show .menu-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.offcanvas.show .menu-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.offcanvas.show .menu-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.offcanvas.show .menu-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.offcanvas.show .menu-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.offcanvas.show .menu-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.offcanvas.show .menu-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.offcanvas.show .menu-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.offcanvas.show .menu-item:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.offcanvas.show .menu-item:nth-child(10) {
+  animation-delay: 10s;
+}
+
+@keyframes menuItemAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
