@@ -17,7 +17,8 @@ function MyOrders() {
 
       try {
         const response = await axios.get(
-          "https://baroque-clone-backend-production.up.railway.app/orders/user/" + user.id,
+          "https://baroque-clone-backend-production.up.railway.app/orders/user/" +
+            user.id,
         );
 
         console.log("My Orders:", response.data);
@@ -35,10 +36,10 @@ function MyOrders() {
     <Container className="py-5 mx-auto ">
       <h2 className="fw-bold mb-4 text-center font-serif">MY ORDERS</h2>
 
-      <div className="pb-4 ps-[850px] ">
+      <div className="text-center mb-4">
         <Button
           onClick={() => navigate("/products")}
-          className="bg-black border-0 rounded-0 tracking-widest text-sm"
+          className="bg-black border-0 rounded-0 tracking-widest text-xs sm:text-sm px-4 sm:px-5 py-2"
         >
           CONTINUE SHOPPING
         </Button>

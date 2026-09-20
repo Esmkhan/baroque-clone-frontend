@@ -23,7 +23,7 @@ function CategorySection1() {
             />
 
             {/* BUTTON */}
-            <button className=" group absolute left-[40%] bottom-[100px] overflow-hidden w-auto border border-black bg-white px-[35px] py-[12px] cursor-pointer">
+            <button className="group absolute left-1/2 -translate-x-1/2 bottom-[30px] sm:bottom-[50px] md:bottom-[100px] overflow-hidden w-auto border border-black bg-white px-[20px] sm:px-[25px] md:px-[35px] py-[10px] sm:py-[12px] cursor-pointer">
               {/* BLACK SLIDING BACKGROUND */}
               <span className="absolute inset-0 bg-black translate-x-full transition-transform duration-300 group-hover:translate-x-0 "></span>
 
@@ -47,7 +47,7 @@ function CategorySection1() {
               className=" w-full transition-transform duration-[3000ms] ease-in-out group-hover:scale-110 "
             />
             {/* BUTTON */}
-            <button className=" group absolute left-[40%] bottom-[100px] overflow-hidden border border-black bg-white px-[35px] py-[12px] cursor-pointer ">
+            <button className="group absolute left-1/2 -translate-x-1/2 bottom-[30px] sm:bottom-[50px] md:bottom-[100px] overflow-hidden border border-black bg-white px-[20px] sm:px-[25px] md:px-[35px] py-[10px] sm:py-[12px] cursor-pointer">
               {/* BLACK SLIDING BACKGROUND */}
               <span className=" absolute inset-0 bg-black translate-x-full transition-transform duration-300 group-hover:translate-x-0 "></span>
 

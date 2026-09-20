@@ -58,9 +58,9 @@ function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-white">
       {/* MAIN HEADER */}
-      <header className=" w-full h-[78px] flex items-center justify-between px-[40px] bg-white border-b border-[#e8e8e8] max-md:h-[65px] max-md:px-[18px] ">
+      <header className="w-full h-[78px] flex items-center justify-between px-[40px] bg-white border-b border-[#e8e8e8] max-md:h-[65px] max-md:px-[12px]">
         {/* LEFT SIDE - MENU */}
-        <div className="w-1/3 flex items-center">
+        <div className="w-1/4 sm:w-1/3 flex items-center">
           <button
             onClick={() => setShowMenu(true)}
             className=" relative border-0 bg-transparent flex items-center justify-center p-[4px] text-[25px] text-[#111] cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[18px] "
@@ -78,6 +78,7 @@ function Navigation() {
             setShowSubMenu(false);
           }}
           placement="start"
+          className="w-[320px] max-sm:w-[85%]"
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
@@ -307,7 +308,7 @@ function Navigation() {
           show={showSubMenu}
           onHide={() => setShowSubMenu(false)}
           placement="start"
-          className="sub-menu"
+          className="sub-menu w-[320px] max-sm:w-[85%]"
         >
           <Offcanvas.Body>
             {selectedMenu === "UNSTITCHED" && (
@@ -318,7 +319,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   SHOP ALL
                 </p>
@@ -377,7 +378,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   SHOP ALL
                 </p>
@@ -495,7 +496,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   ENSEMBLES
                 </p>
@@ -532,7 +533,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   UNSTITCHED
                 </p>
@@ -558,7 +559,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   UNSTITCHED
                 </p>
@@ -584,7 +585,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   WHO WE ARE
                 </p>
@@ -639,7 +640,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   CONTACT US
                 </p>
@@ -674,7 +675,7 @@ function Navigation() {
                     setShowMenu(false);
                     setShowSubMenu(false);
                   }}
-                  className="menu-item pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
+                  className="menu-item pt-pt-[50px] sm:pt-[71px] pb-2 border-bottom cursor-pointer flex justify-between text-sm tracking-[2.5px] text-black"
                 >
                   PRIVACY POLICY
                 </p>
@@ -723,7 +724,7 @@ function Navigation() {
           </Offcanvas.Body>
         </Offcanvas>
 
-        <div className=" w-1/3 text-center text-[33px] font-medium tracking-[-4px] whitespace-nowrap font-serif max-md:text-[21px] max-md:tracking-[3px]">
+        <div className="w-1/2 sm:w-1/3 text-center text-[33px] font-medium tracking-[-4px] whitespace-nowrap font-serif max-md:text-[20px] max-md:tracking-[1px]">
           <p
             onClick={() => {
               window.location.replace("/");
@@ -735,11 +736,11 @@ function Navigation() {
         </div>
 
         {/* RIGHT SIDE - ICONS */}
-        <div className=" w-1/3 flex items-center justify-end gap-[22px] max-md:gap-[12px] ">
+        <div className="w-1/4 sm:w-1/3 flex items-center justify-end gap-[22px] max-md:gap-[7px]">
           <div>
             <p
               onClick={() => setShowPakistanPopup(true)}
-              className="cursor-pointer flex items-center gap-2 pt-3 text-xs text-gray-600 tracking-[1.5px] font-thin hover:text-black"
+              className="cursor-pointer flex items-center gap-1 pt-3 text-[9px] sm:text-xs text-gray-600 tracking-[1px] sm:tracking-[1.5px] font-thin whitespace-nowrap"
             >
               PAKISTAN <span>﹀</span>
             </p>
@@ -747,7 +748,7 @@ function Navigation() {
           {/* USER */}
           <button
             onClick={handleUserClick}
-            className=" relative border-0 bg-transparent flex items-center justify-center p-[4px] text-[25px] text-[#111] cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[18px] "
+            className=" relative border-0 bg-transparent flex items-center justify-center p-[4px] text-[25px] text-[#111] cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[17px] "
           >
             <FiUser />
           </button>
@@ -767,7 +768,7 @@ function Navigation() {
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
                 autoFocus
-                className=" w-[180px] px-[10px] py-[7px] border border-[#ddd] outline-none "
+               className="w-[180px] max-md:w-[110px] px-[8px] py-[6px] border border-[#ddd] outline-none"
               />
             </form>
           )}
@@ -781,7 +782,7 @@ function Navigation() {
                 setSearchOpen(true);
               }
             }}
-            className=" relative border-0 bg-transparent flex items-center justify-center p-[4px] text-[25px] text-[#111] cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[18px] "
+            className=" relative border-0 bg-transparent flex items-center justify-center p-[4px] text-[25px] text-[#111] cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[17px] "
           >
             <FiSearch />
           </button>
@@ -789,7 +790,7 @@ function Navigation() {
           {/* CART */}
           <button
             onClick={openCart}
-            className=" relative flex items-center justify-center p-[4px] text-[25px] text-[#111] border-0 bg-transparent cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[18px] "
+            className=" relative flex items-center justify-center p-[4px] text-[25px] text-[#111] border-0 bg-transparent cursor-pointer transition-opacity duration-200 hover:opacity-60 max-md:text-[17px] "
           >
             <FiShoppingBag />
 
@@ -802,7 +803,7 @@ function Navigation() {
           {/* WISHLIST */}
           <Link
             to="/wishlist"
-            className="relative flex items-center justify-center p-[4px] text-[25px] text-[#111] no-underline transition-opacity duration-200 hover:opacity-60 max-md:text-[18px]"
+            className="relative flex items-center justify-center p-[4px] text-[25px] text-[#111] no-underline transition-opacity duration-200 hover:opacity-60 max-md:text-[17px]"
           >
             <FiHeart />
 
