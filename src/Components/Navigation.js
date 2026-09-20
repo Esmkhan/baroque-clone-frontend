@@ -78,7 +78,7 @@ function Navigation() {
             setShowSubMenu(false);
           }}
           placement="start"
-          className="w-[320px] max-sm:w-[85%]"
+          className="!w-[50vw] sm:!w-[320px]"
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
@@ -308,7 +308,7 @@ function Navigation() {
           show={showSubMenu}
           onHide={() => setShowSubMenu(false)}
           placement="start"
-          className="sub-menu w-[320px] max-sm:w-[85%]"
+          className="sub-menu !w-[50vw] sm:!w-[320px] !left-[50vw] sm:!left-[320px]"
         >
           <Offcanvas.Body>
             {selectedMenu === "UNSTITCHED" && (

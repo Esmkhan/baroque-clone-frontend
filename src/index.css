@@ -15,7 +15,7 @@ body {
 }
 
 .sub-menu {
-  left: 400px !important;
+  left: 50vw !important;
 }
 .menu-item {
   opacity: 0;
