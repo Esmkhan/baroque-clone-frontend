@@ -77,7 +77,7 @@ function AddProduct() {
         imageData.append("title", formData.name || "Product Image");
 
         const response = await axios.post(
-          "http://localhost:5000/api/media",
+          "https://baroque-clone-backend-production.up.railway.app/api/media",
           imageData,
         );
 
@@ -157,7 +157,7 @@ function AddProduct() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/products/addProduct",
+        "https://baroque-clone-backend-production.up.railway.app/products/addProduct",
         productData,
         {
           headers: {

@@ -38,7 +38,7 @@ function EditProduct() {
     }
 
     axios
-      .get("http://localhost:5000/products/singleProduct/" + productId)
+      .get("https://baroque-clone-backend-production.up.railway.app/products/singleProduct/" + productId)
       .then((res) => {
         console.log("Product:", res.data);
 
@@ -119,7 +119,7 @@ function EditProduct() {
         imageData.append("title", formData.name || "Product Image");
 
         const response = await axios.post(
-          "http://localhost:5000/api/media",
+          "https://baroque-clone-backend-production.up.railway.app/api/media",
           imageData,
         );
 
@@ -198,7 +198,7 @@ function EditProduct() {
 
       // Update product
       const response = await axios.put(
-        "http://localhost:5000/products/updateProduct/" + productId,
+        "https://baroque-clone-backend-production.up.railway.app/products/updateProduct/" + productId,
 
         productData,
 

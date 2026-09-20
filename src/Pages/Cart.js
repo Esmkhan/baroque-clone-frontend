@@ -28,7 +28,7 @@ function Cart() {
     }
 
     try {
-      const response = await axios.get("http://localhost:5000/cart/" + userId);
+      const response = await axios.get("https://baroque-clone-backend-production.up.railway.app/cart/" + userId);
 
       console.log("Cart Data:", response.data);
 
@@ -47,7 +47,7 @@ function Cart() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
 
-      await axios.put("http://localhost:5000/cart/update", {
+      await axios.put("https://baroque-clone-backend-production.up.railway.app/cart/update", {
         userId: user.id,
         productId: item.productId._id,
         size: item.size,
@@ -55,7 +55,7 @@ function Cart() {
         quantity: newQuantity,
       });
 
-      const response = await axios.get("http://localhost:5000/cart/" + user.id);
+      const response = await axios.get("https://baroque-clone-backend-production.up.railway.app/cart/" + user.id);
 
       const updatedItems = response.data.items || [];
 
@@ -77,7 +77,7 @@ function Cart() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
 
-      await axios.delete("http://localhost:5000/cart/remove", {
+      await axios.delete("https://baroque-clone-backend-production.up.railway.app/cart/remove", {
         data: {
           userId: user.id,
           productId: item.productId._id,
@@ -91,7 +91,7 @@ function Cart() {
       console.log("Remove item error:", error);
     }
 
-    const response = await axios.get("http://localhost:5000/cart/" + user.id);
+    const response = await axios.get("https://baroque-clone-backend-production.up.railway.app/cart/" + user.id);
 
     const updatedItems = response.data.items || [];
 

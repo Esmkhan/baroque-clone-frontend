@@ -14,7 +14,7 @@ function AdminUsers() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.get("http://localhost:5000/admin/users", {
+      const response = await axios.get("https://baroque-clone-backend-production.up.railway.app/admin/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -51,7 +51,7 @@ function AdminUsers() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/admin/users/${userId}`, {
+      await axios.delete(`https://baroque-clone-backend-production.up.railway.app/admin/users/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

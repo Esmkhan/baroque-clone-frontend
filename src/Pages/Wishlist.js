@@ -21,7 +21,7 @@ function Wishlist() {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/wishlist/${user.id}`,
+        `https://baroque-clone-backend-production.up.railway.app/wishlist/${user.id}`,
       );
 
       setWishlist(response.data.wishlist);
@@ -42,7 +42,7 @@ function Wishlist() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
 
-      await axios.delete("http://localhost:5000/wishlist/remove", {
+      await axios.delete("https://baroque-clone-backend-production.up.railway.app/wishlist/remove", {
         data: {
           userId: user.id,
           productId: productId,

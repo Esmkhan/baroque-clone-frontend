@@ -16,7 +16,7 @@ function AdminCategories() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/admin/categories",
+        "https://baroque-clone-backend-production.up.railway.app/admin/categories",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ function AdminCategories() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/categories/addCategory",
+        "https://baroque-clone-backend-production.up.railway.app/categories/addCategory",
         {
           name: categoryName,
         },
@@ -89,7 +89,7 @@ function AdminCategories() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/categories/deleteCategory/${categoryId}`,
+        `https://baroque-clone-backend-production.up.railway.app/categories/deleteCategory/${categoryId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

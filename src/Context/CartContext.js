@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
         }
 
         const response = await axios.get(
-          "http://localhost:5000/cart/" + user.id,
+          "https://baroque-clone-backend-production.up.railway.app/cart/" + user.id,
         );
 
         const items = response.data.items || [];

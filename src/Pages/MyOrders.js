@@ -17,7 +17,7 @@ function MyOrders() {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/orders/user/" + user.id,
+          "https://baroque-clone-backend-production.up.railway.app/orders/user/" + user.id,
         );
 
         console.log("My Orders:", response.data);

@@ -20,7 +20,7 @@ function MediaUpload() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/media",
+        "https://baroque-clone-backend-production.up.railway.app/api/media",
         formData,
       );
 

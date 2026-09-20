@@ -43,7 +43,7 @@ function ProductListing() {
 
     setLoading(true);
 
-    let url = "http://localhost:5000/products/search-filter-pagination?";
+    let url = "https://baroque-clone-backend-production.up.railway.app/products/search-filter-pagination?";
 
     const params = [];
 
@@ -154,7 +154,7 @@ function ProductListing() {
         return;
       }
 
-      await axios.post("http://localhost:5000/wishlist/add", {
+      await axios.post("https://baroque-clone-backend-production.up.railway.app/wishlist/add", {
         userId: user.id,
         productId: productId,
       });
@@ -182,7 +182,7 @@ function ProductListing() {
         return;
       }
 
-      await axios.post("http://localhost:5000/cart/add", {
+      await axios.post("https://baroque-clone-backend-production.up.railway.app/cart/add", {
         userId: user.id,
         productId: product._id,
         quantity: 1,
@@ -192,7 +192,7 @@ function ProductListing() {
 
       // Get the updated cart
       const cartResponse = await axios.get(
-        "http://localhost:5000/cart/" + user.id,
+        "https://baroque-clone-backend-production.up.railway.app/cart/" + user.id,
       );
 
       const items = cartResponse.data.items || [];

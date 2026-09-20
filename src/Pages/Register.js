@@ -22,7 +22,7 @@ function Register() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/users/registerUser", data)
+      .post("https://baroque-clone-backend-production.up.railway.app/users/registerUser", data)
       .then((res) => {
         if (res.data.status) {
           localStorage.setItem("token", res.data.token);

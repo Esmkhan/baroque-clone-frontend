@@ -24,7 +24,7 @@ function ProductDetails() {
   // Get single product
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/products/singleProduct/${id}`)
+      .get(`https://baroque-clone-backend-production.up.railway.app/products/singleProduct/${id}`)
       .then((response) => {
         setProduct(response.data);
         setLoading(false);
@@ -41,7 +41,7 @@ function ProductDetails() {
 
     axios
       .get(
-        `http://localhost:5000/products/search-filter-pagination?category=${product.category}&page=1&limit=5`,
+        `https://baroque-clone-backend-production.up.railway.app/products/search-filter-pagination?category=${product.category}&page=1&limit=5`,
       )
       .then((response) => {
         const products = response.data.products || [];
@@ -87,7 +87,7 @@ function ProductDetails() {
       console.log("USER:", user);
       console.log("USER ID:", user.id);
 
-      const response = await axios.post("http://localhost:5000/cart/add", {
+      const response = await axios.post("https://baroque-clone-backend-production.up.railway.app/cart/add", {
         userId: user.id,
         productId: product._id,
         quantity: quantity,
@@ -131,7 +131,7 @@ function ProductDetails() {
       console.log("USER:", user);
       console.log("USER ID:", user.id);
 
-      const response = await axios.post("http://localhost:5000/wishlist/add", {
+      const response = await axios.post("https://baroque-clone-backend-production.up.railway.app/wishlist/add", {
         userId: user.id,
         productId: product._id,
       });

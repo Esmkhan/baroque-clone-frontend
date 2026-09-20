@@ -21,7 +21,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/admin/dashboard/stats",
+        "https://baroque-clone-backend-production.up.railway.app/admin/dashboard/stats",
         {
           headers: {
             Authorization: `Bearer ${token}`,

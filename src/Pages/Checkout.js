@@ -35,7 +35,7 @@ function Checkout() {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/cart/" + user.id,
+          "https://baroque-clone-backend-production.up.railway.app/cart/" + user.id,
         );
 
         console.log("Checkout Cart:", response.data);
@@ -75,7 +75,7 @@ function Checkout() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/orders/checkout",
+        "https://baroque-clone-backend-production.up.railway.app/orders/checkout",
         {
           userId: user.id,
           shippingAddress: shippingAddress,

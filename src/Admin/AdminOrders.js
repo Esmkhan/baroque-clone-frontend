@@ -13,7 +13,7 @@ function AdminOrders() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.get("http://localhost:5000/admin/orders", {
+      const response = await axios.get("https://baroque-clone-backend-production.up.railway.app/admin/orders", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -33,7 +33,7 @@ function AdminOrders() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/admin/orders/${orderId}/status`,
+        `https://baroque-clone-backend-production.up.railway.app/admin/orders/${orderId}/status`,
         {
           status: newStatus,
         },

@@ -23,7 +23,7 @@ function Login() {
     e.preventDefault();
     console.log(data);
     axios
-      .post(`http://localhost:5000/users/loginUser`, data)
+      .post(`https://baroque-clone-backend-production.up.railway.app/users/loginUser`, data)
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.data.token);

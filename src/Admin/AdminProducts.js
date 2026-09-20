@@ -11,7 +11,7 @@ function AdminProducts() {
   // Get all products
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products/getProducts")
+      .get("https://baroque-clone-backend-production.up.railway.app/products/getProducts")
       .then((res) => {
         console.log(res.data);
         setProducts(res.data);
@@ -37,7 +37,7 @@ function AdminProducts() {
     const token = localStorage.getItem("token");
 
     axios
-      .delete("http://localhost:5000/products/deleteProduct/" + id, {
+      .delete("https://baroque-clone-backend-production.up.railway.app/products/deleteProduct/" + id, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

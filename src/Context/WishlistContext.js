@@ -17,7 +17,7 @@ export const WishlistProvider = ({ children }) => {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/wishlist/${user.id}`,
+        `https://baroque-clone-backend-production.up.railway.app/wishlist/${user.id}`,
       );
 
       const products = response.data.wishlist?.products || [];

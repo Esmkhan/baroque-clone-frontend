@@ -21,7 +21,7 @@ function AdminRegister() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/admin/create", data)
+      .post("https://baroque-clone-backend-production.up.railway.app/admin/create", data)
       .then((res) => {
         console.log("Admin created:", res.data);
 
