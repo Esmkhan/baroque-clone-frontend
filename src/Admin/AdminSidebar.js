@@ -18,7 +18,7 @@ function AdminSidebar() {
     }`;
 
   return (
-    <div className="bg-black text-white min-h-screen w-64 p-4">
+    <div className="bg-black text-white w-64 h-screen p-4 sticky top-0">
       <h2 className="text-2xl font-semibold mb-8">BAROQUE</h2>
 
       <div className="flex flex-col gap-2">
